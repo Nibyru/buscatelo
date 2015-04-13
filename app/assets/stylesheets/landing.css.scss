@@ -1,0 +1,90 @@
+#landing{
+	height: 100%;
+	.landing-page{
+		height: 100%;
+		.volver{
+			position: relative;
+			text-align: right;
+			height: 9%;
+			img{
+				position: absolute;
+			  right: 20px;
+				top: 0;
+				bottom: 0;
+				margin: auto;
+			}
+		}
+		.informacion{
+			color: #999999;
+			h1{
+				font-size:44px;
+				font-weight:300;
+				margin:0;
+			}
+			.etiquetas{
+				width: 350px;
+				margin: 15px 0;
+				.etiqueta-filtro{
+				  display: inline-block;
+					height: 24px;
+					line-height: 24px;
+					padding: 0;
+					margin: 3px 3px 3px 0;
+					background: #DE4B4A;
+					color: #FFF;
+					text-transform: uppercase;
+					span,p{
+						display:inline-block;
+						vertical-align: top;
+					}
+					span{
+						height: 24px;
+					  background: #CC4443;
+						font-size:20px;
+						padding: 2px 5px;
+					}
+					p{
+						margin:0;
+						padding: 0 8px 0 5px;
+					}
+				}
+			}
+			h4{
+				font-size: 16px;
+				margin: 5px 0;
+			}
+			.precios{
+				background:#F9F9F9;
+				padding:20px 20px 10px 20px;
+				font-size: 12px;
+				font-weight: 400;
+				margin-top: 30px;
+				span{
+					display: block;
+					height: 55px;
+					line-height: 55px;
+					p,h3{display:inline-block;}
+					p{
+						font-size: 18px;
+						font-weight: 300;
+					}
+					h3{
+						float: right;
+					  font-size: 31px;
+						color: #DE4B4A;
+						font-weight: 300;
+						margin: 0;
+						height: 60px;
+						line-height: 60px;
+						b{
+							font-size:15px;
+							font-weight: 300;
+						}
+					}
+				}
+				hr{margin:5px 0;background: #EAEAEA;}
+			}
+			.turno{text-align:right;margin-top:10px;}
+		}
+	}
+}
