@@ -1,0 +1,29 @@
+<h1>Listing amenities</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Place</th>
+      <th>icon name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @amenities.each do |amenity| %>
+      <tr>
+        <td><%= amenity.name %></td>
+        <td><%= amenity.place %></td>
+        <td><%= amenity.icon %></td>
+        <td><%= link_to 'Show', admin_amenity_path(amenity) %></td>
+        <td><%= link_to 'Edit', edit_admin_amenity_path(amenity) %></td>
+        <td><%= link_to 'Destroy', admin_amenity_path(amenity), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Amenity', new_admin_amenity_path %>
