@@ -69,20 +69,19 @@
 						span{font-size:18px;padding-top:4px;}
 						p{
 							font-size: 12px;
-							font-weight: 400px;
+							font-weight: 400;
 							margin:0;
 						}
 					}
 				}
 			}
 		}
-		.lista::-webkit-scrollbar{
-			width: 6px;
-			background-color: #E0E0E0;
-		}
+		.lista::-webkit-scrollbar{width:6px; background-color:#E0E0E0;}
+		.lista::-webkit-scrollbar-thumb{background-color:#DE4B4A;}
+		.lista::-moz-scrollbar{width:6px; background-color:#E0E0E0;}
+		.lista::-moz-scrollbar-thumb{background-color:#DE4B4A;}
+		.lista::-o-scrollbar{width:6px; background-color:#E0E0E0;}
+		.lista::-o-scrollbar-thumb{background-color:#DE4B4A;}
 
-		.lista::-webkit-scrollbar-thumb{
-			background-color: #DE4B4A;
-		}
 	}
 }

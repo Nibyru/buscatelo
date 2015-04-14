@@ -1,11 +1,10 @@
 #landing{
-	height: 100%;
 	.landing-page{
-		height: 100%;
+		padding-bottom:50px;
 		.volver{
 			position: relative;
 			text-align: right;
-			height: 9%;
+			height: 70px;
 			img{
 				position: absolute;
 			  right: 20px;
@@ -20,6 +19,10 @@
 				font-size:44px;
 				font-weight:300;
 				margin:0;
+			}
+			.etiquetas,.referencias{
+				display:inline-block;
+				vertical-align: top;
 			}
 			.etiquetas{
 				width: 350px;
@@ -49,20 +52,37 @@
 					}
 				}
 			}
+			.referencias{
+				margin-top: 15px;
+				float: right;
+				span,p{
+					display:inline-block;
+					vertical-align: middle;
+				}
+				span{font-size:22px;
+					padding-top:4px;
+					color: #DE4B4A;
+				}
+				p{
+					font-size: 16px;
+					font-weight: 400;
+					margin:0;
+				}
+			}
 			h4{
 				font-size: 16px;
-				margin: 5px 0;
+				margin: 7px 0;
 			}
 			.precios{
 				background:#F9F9F9;
 				padding:20px 20px 10px 20px;
 				font-size: 12px;
 				font-weight: 400;
-				margin-top: 30px;
+				margin-top: 45px;
 				span{
 					display: block;
-					height: 55px;
-					line-height: 55px;
+					height: 60px;
+					line-height: 60px;
 					p,h3{display:inline-block;}
 					p{
 						font-size: 18px;
@@ -84,7 +104,91 @@
 				}
 				hr{margin:5px 0;background: #EAEAEA;}
 			}
-			.turno{text-align:right;margin-top:10px;}
+			.turno{text-align:right;margin:10px 0;}
+			.fotos{
+				text-align: center;
+				margin:65px 0;
+				img{
+					height: 175px;
+					width: auto;
+					display: inline-block;
+					margin: 5px;
+				}
+			}
+			.mapa{
+				height: 380px;
+				margin: 0 -15px;
+				background:#ccc;
+			}
+			.comentarios{
+				background:#F9F9F9;
+				padding:30px;
+				font-size: 12px;
+				margin-top: 65px;
+				margin-bottom: 30px;
+				textarea{
+					width: 100%;
+					height: 120px;
+					resize: none;
+					font-size: 15px;
+					color: #000;
+				}
+				.calificacion,input{
+					display:inline-block;
+					vertical-align:middle;
+				}
+				.calificacion{
+					margin: 20px 0;
+					span,p{
+						display:inline-block;
+						vertical-align:middle;
+					}
+					span{
+						font-size: 25px;
+						color: #D5D5D5;
+						margin-right: 5px;
+						cursor: pointer;
+						&:hover{color: #DE4B4A;}
+					}
+					p{font-size:12px;margin:0 15px 0 5px;}
+					.icon-masculino{margin-left:-5px;}
+				}
+				input{
+					background:#EAEAEA;
+					margin-top: 15px;
+				  width: 75px;
+					height: 35px;
+					font-size: 13px;
+					border:none;
+					float: right;
+				}
+			}
+			.ver-comentarios{
+				text-align: center;
+				.boton-ver{
+					background:#F9F9F9;
+					text-transform: uppercase;
+					margin:auto;
+					padding:10px;
+					p,span{
+						display:inline-block;
+						vertical-align:middle;
+					}
+					p{
+						margin:0;
+						font-size: 13px;
+					}
+					span{
+						transform: rotate(90deg);
+						background: #E0E0E0;
+						padding: 3px;
+						border-radius: 100%;
+						font-size: 10px;
+						margin-left: 5px;
+					}
+				}
+			}
 		}
 	}
+
 }

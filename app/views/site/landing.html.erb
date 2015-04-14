@@ -1,12 +1,12 @@
 <div id="landing">
 	<div class="container">
-		<div class="row" style="height:100%;">
+		<div class="row">
 
 			<div class="col-lg-3 col-md-3 filtros">
 				<%= render 'shared/filtros' %>
 			</div>
 
-			<div class="col-lg-9 col-md-9 landing-page">
+			<div class="col-lg-9 col-lg-offset-3 col-md-9 col-md-offset-3 landing-page">
 
 				<div class="volver">
 					<%= link_to (comodidades_path) do %>
@@ -16,7 +16,9 @@
 
 				<div class="row">
 					<div class="col-lg-12 col-md-12 informacion">
+
 						<h1>Le Privé</h1>
+
 						<div class="etiquetas">
 							<div class="etiqueta-filtro">
 								<span class="icon-parking"></span>
@@ -39,9 +41,16 @@
 								<p>Hidromasaje</p>
 							</div>
 						</div>
+
+						<div class="referencias">
+							<span class="icon-comentarios"></span>
+							<p>4,9 / 5 · Excelente</p>
+						</div>
+						
 						<h4>Av. Mate de Luna 2000</h4>
 						<h4>Tafí Viejo, Tucumán</h4>
 						<h4>(0381) 4 55 55 55</h4>
+
 						<div class="precios">
 							<p>PRECIOS</p>
 							<span>
@@ -56,10 +65,46 @@
 								<p>Habitación Master</p><h3>$320<b> / *por turno</b></h3>
 							</span>
 						</div>
-						<p class="turno">*Los turnos constan den 1.30 hs cada uno</p>
+
+						<p class="turno">*Los turnos constan de 1.30 hs cada uno</p>
+
+						<div class="fotos">
+							<%= image_tag('prive-02.jpg') %>
+							<%= image_tag('prive-03.jpg') %>
+							<%= image_tag('prive-04.jpg') %>
+							<%= image_tag('prive-05.jpg') %>
+							<%= image_tag('prive-06.jpg') %>
+							<%= image_tag('prive-07.jpg') %>
+						</div>
+
+						<div class="mapa">
+						</div>
+
+						<form class="comentarios">
+							<p>DEJÁ TU OPINIÓN</p>
+							<textarea></textarea>
+							<div class="calificacion">
+								<span class="icon-pinmapa"></span>
+								<span class="icon-pinmapa"></span>
+								<span class="icon-pinmapa"></span>
+								<span class="icon-pinmapa"></span>
+								<span class="icon-pinmapa"></span>
+								<p>Muy bueno</p>
+								<span class="icon-femenino"></span>
+								<span class="icon-masculino"></span>
+							</div>
+							<input type="submit" value="ENVIAR">
+						</form>
+
+						<div class="ver-comentarios">
+							<span class="boton-ver">
+								<p>Ver todos los comentarios</p>
+								<span class="icon-vermas"></span>
+							</span>
+						</div>
 					</div>
+				</div>
 			</div>
-			
 		</div>
 	</div>
 </div>
