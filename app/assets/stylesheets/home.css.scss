@@ -15,9 +15,9 @@
 		margin-top:10%;
 		h1{
 			font-size:66px;
-		    color:#fff;
-		    font-weight:300;
-		    b{font-weight:700;}
+	    color:#fff;
+	    font-weight:300;
+	    b{font-weight:700;}
 		}
 	}
 	a{
@@ -51,8 +51,10 @@
 		}
 		.boton:hover{border:1px solid #de4c4b;color:#de4c4b;}	
 	}
+}
 
-	@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
+	#home{
 		background-attachment: fixed;
 		overflow: auto;
 		padding-bottom:30px;
@@ -64,8 +66,10 @@
 			}
 		}
 	}
+}
 
-	@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 480px) {
+	#home{
 		background-attachment: fixed;
 		overflow: auto;
 		.logo{margin-top:5%;}
@@ -77,4 +81,3 @@
 		}
 	}
 }
-
