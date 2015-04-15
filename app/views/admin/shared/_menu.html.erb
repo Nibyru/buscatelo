@@ -1,0 +1,20 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <%= link_to root_path, class: "navbar-brand" do %>
+        <%= image_tag('marca-filtros.png') %>
+      <% end %>
+    </div>
+    <div class="btn-group" role="group">
+      <%= link_to "Dashboard", admin_root_path, class: "btn btn-default navbar-btn" %>
+      <%= link_to "Places", admin_places_path, class: "btn btn-default navbar-btn" %>
+      <%= link_to "Prices", admin_prices_path, class: "btn btn-default navbar-btn" %>
+    	<%= link_to "Amenities", admin_amenities_path, class: "btn btn-default navbar-btn" %>
+    </div>
+    <p class="navbar-text navbar-right"><%= current_admin.email %> 
+      <%= link_to destroy_admin_session_path, method: :delete do %>
+        <span class="label label-danger"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Logout</span>
+      <% end %>
+    </p>
+  </div>
+</nav>

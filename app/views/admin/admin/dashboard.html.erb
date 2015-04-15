@@ -1,1 +1,127 @@
-<h1>dashboard</h1>
+<h1><span class="glyphicon glyphicon-dashboard" aria-hidden="true"></span> Dashboard</h1>
+<div class="row">
+  <div class="col-lg-6">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h1>Last Places</h1>
+      </div>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Phone</th>
+            <th></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @places.each do |place| %>
+            <tr>
+              <td><%= place.name %></td>
+              <td><%= place.address %></td>
+              <td><%= place.phone %></td>
+              <td>
+                <div class="btn-group" role="group">
+                <%= link_to admin_place_path(place), class: "btn btn-info" do %>
+                  <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+                <% end %>
+                <%= link_to edit_admin_place_path(place), class: "btn btn-info" do %>
+                  <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                <% end %>
+                <%= link_to admin_place_path(place), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" do %>
+                  <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
+                <% end %>
+                </div>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+      <div class="panel-footer">
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h1>Last Prices</h1>
+      </div>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @prices.each do |price| %>
+            <tr>
+              <td><%= price.name %></td>
+              <td>$<%= price.price %></td>
+              <td>
+                <div class="btn-group" role="group">
+                <%= link_to admin_price_path(price), class: "btn btn-info" do %>
+                  <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+                <% end %>
+                <%= link_to edit_admin_price_path(price), class: "btn btn-info" do %>
+                  <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                <% end %>
+                <%= link_to admin_price_path(price), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" do %>
+                  <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
+                <% end %>
+                </div>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+      <div class="panel-footer">
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h1>Last Amenities</h1>
+      </div>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Icon name</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @amenities.each do |amenity| %>
+            <tr>
+              <td><%= amenity.name %></td>
+              <td><%= amenity.icon %></td>
+              <td>
+                <div class="btn-group" role="group">
+                <%= link_to admin_amenity_path(amenity), class: "btn btn-info" do %>
+                  <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+                <% end %>
+                <%= link_to edit_admin_amenity_path(amenity), class: "btn btn-info" do %>
+                  <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                <% end %>
+                <%= link_to admin_amenity_path(amenity), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" do %>
+                  <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
+                <% end %>
+                </div>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+      <div class="panel-footer">
+      </div>
+    </div>
+  </div>
+</div>

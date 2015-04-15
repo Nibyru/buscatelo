@@ -1,4 +1,4 @@
-class Admin::PlacesController < ApplicationController
+class Admin::PlacesController < Admin::AdminController
   before_action :authenticate_admin!
   before_action :set_place, only: [:show, :edit, :update, :destroy]
 

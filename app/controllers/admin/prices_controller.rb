@@ -1,4 +1,4 @@
-class Admin::PricesController < ApplicationController
+class Admin::PricesController < Admin::AdminController
   before_action :authenticate_admin!
   before_action :set_price, only: [:show, :edit, :update, :destroy]
 
