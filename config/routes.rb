@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
 
-  devise_for :admins
+  if Rails.env.production?
+     devise_for :admins, :controllers => { :registrations => "registrations" } 
+   else
+     devise_for :admins
+   end
   root 'site#index'
 
   namespace :admin do
