@@ -48,6 +48,21 @@
     </div>
   </div>
   <div class="form-group">
+    <%= f.label :amenities,  class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.fields_for :amenities do |amenity_form| %>
+        <div class="form-group">
+          <%= f.label :name %>
+          <%= amenity_form.text_field :name, class: "form-control", required: true %>
+          <%= f.label :icon_name %>
+          <%= amenity_form.text_field :icon, class: "form-control", required: true %>
+          <%= amenity_form.link_to_remove "Remove this amenity", class: 'label label-danger' %>
+        </div>
+      <% end %>
+      <p><%= f.link_to_add "Add a amenity", :amenities, class: 'label label-info' %></p>
+    </div>
+  </div>
+  <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
       <%= f.button class: "btn btn-success" do %>
         <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Save

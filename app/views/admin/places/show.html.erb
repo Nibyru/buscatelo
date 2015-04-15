@@ -20,6 +20,30 @@
         <%= @place.phone %>
       </p>
     </li>
+    <li class="list-group-item">
+      <p>
+        <strong>Prices:</strong>
+          <ul class="list-group">
+            <% @place.prices.each do |price| %>
+              <li class="list-group-item">
+                  <%= "#{price.name} - $#{price.price}" %>
+              </li>
+            <% end %>
+          </ul>
+      </p>
+    </li>
+    <li class="list-group-item">
+      <p>
+        <strong>Amenities:</strong>
+          <ul class="list-group">
+            <% @place.amenities.each do |amenity| %>
+              <li class="list-group-item">
+                  <%= "#{amenity.name} - #{amenity.icon}" %>
+              </li>
+            <% end %>
+          </ul>
+      </p>
+    </li>
   </ul>
   <div class="panel-footer">
     <div class="btn-group">
