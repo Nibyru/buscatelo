@@ -57,9 +57,11 @@
 		overflow: auto;
 		padding-bottom:30px;
 		.logo{margin-top:5%;}
-		.lugar h1{
-			font-size:40px;
-			margin-bottom:20px;
+		.lugar{
+			h1{
+				font-size:40px;
+				margin-bottom:20px;
+			}
 		}
 	}
 
@@ -67,9 +69,11 @@
 		background-attachment: fixed;
 		overflow: auto;
 		.logo{margin-top:5%;}
-		.lugar h1{
-			font-size:40px;
-			margin-bottom:20px;
+		.lugar{
+			h1{
+				font-size:40px;
+				margin-bottom:20px;
+			}
 		}
 	}
 }
