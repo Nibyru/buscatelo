@@ -70,6 +70,6 @@ class Admin::PlacesController < Admin::AdminController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def place_params
-      params.require(:place).permit(:name, :address, :phone, :prices, :amenities)
+      params.require(:place).permit(:name, :address, :phone, :prices, :amenities, prices_attributes: [:id, :name, :price, :_destroy])
     end
 end
