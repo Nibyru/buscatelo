@@ -1,6 +1,11 @@
-<h1>Editing price</h1>
-
-<%= render 'edit_form' %>
-
-<%= link_to 'Show', admin_price_path(@price) %> |
-<%= link_to 'Back', admin_prices_path %>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h1>Editing price - <%= @price.name %></h1>
+  </div>
+  <div class="panel-content">
+    <%= render 'edit_form' %>
+  </div>
+  <div class="panel-footer">
+    <%= link_to 'Back', admin_prices_path, class: 'btn btn-default' %>
+  </div>
+</div>

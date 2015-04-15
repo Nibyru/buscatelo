@@ -1,19 +1,25 @@
 <p id="notice"><%= notice %></p>
+<div class="panel panel-default">
+  <div class="panel-heading"><h1>Show Price</h1></div>
+  <ul class="list-group">
+    <li class="list-group-item">
+      <p>
+        <strong>Name:</strong>
+        <%= @price.name %>
+      </p>
+    </li>
+    <li class="list-group-item">
+      <p>
+        <strong>Price:</strong>
+        <%= @price.price %>
+      </p>
+    </li>
+  </ul>
+  <div class="panel-footer">
+    <div class="btn-group">
+      <%= link_to 'Edit', edit_admin_price_path(@price), class: 'btn btn-default' %>
+      <%= link_to 'Back', admin_prices_path, class: 'btn btn-default' %>
+    </div>
+  </div>
+</div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @price.name %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @price.price %>
-</p>
-
-<p>
-  <strong>Place:</strong>
-  <%= @price.place %>
-</p>
-
-<%= link_to 'Edit', edit_admin_price_path(@price) %> |
-<%= link_to 'Back', admin_prices_path %>

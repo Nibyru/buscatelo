@@ -1,19 +1,24 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @amenity.name %>
-</p>
-
-<p>
-  <strong>Place:</strong>
-  <%= @amenity.place %>
-</p>
-
-<p>
-  <strong>Icon:</strong>
-  <%= @amenity.icon %>
-</p>
-
-<%= link_to 'Edit', edit_admin_amenity_path(@amenity) %> |
-<%= link_to 'Back', admin_amenities_path %>
+<div class="panel panel-default">
+  <div class="panel-heading"><h1>Show Amenity</h1></div>
+  <ul class="list-group">
+    <li class="list-group-item">
+      <p>
+        <strong>Name:</strong>
+        <%= @amenity.name %>
+      </p>
+    </li>
+    <li class="list-group-item">
+      <p>
+        <strong>Address:</strong>
+        <%= @amenity.icon %>
+      </p>
+    </li>
+  </ul>
+  <div class="panel-footer">
+    <div class="btn-group">
+      <%= link_to 'Edit', edit_admin_amenity_path(@amenity), class: 'btn btn-default' %>
+      <%= link_to 'Back', admin_amenities_path, class: 'btn btn-default' %>
+    </div>
+  </div>
+</div>
