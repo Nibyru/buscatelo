@@ -57,6 +57,7 @@
           <tr>
             <th>Name</th>
             <th>Price</th>
+            <th>Place</th>
             <th></th>
           </tr>
         </thead>
@@ -66,6 +67,7 @@
             <tr>
               <td><%= price.name %></td>
               <td>$<%= price.price %></td>
+              <td><%= price.place.try(:name) %></td>
               <td>
                 <div class="btn-group" role="group">
                 <%= link_to admin_price_path(price), class: "btn btn-info" do %>
@@ -100,6 +102,7 @@
           <tr>
             <th>Name</th>
             <th>Icon name</th>
+            <th>Place</th>
             <th>Actions</th>
           </tr>
         </thead>
@@ -109,6 +112,7 @@
             <tr>
               <td><%= amenity.name %></td>
               <td><%= amenity.icon %></td>
+              <td><%= amenity.place.try(:name) %></td>
               <td>
                 <div class="btn-group" role="group">
                 <%= link_to admin_amenity_path(amenity), class: "btn btn-info" do %>
