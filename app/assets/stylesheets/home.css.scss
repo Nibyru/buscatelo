@@ -51,30 +51,26 @@
 		}
 		.boton:hover{border:1px solid #de4c4b;color:#de4c4b;}	
 	}
-}
 
-
-@media only screen and (max-width: 768px) {
-	#home{
+	@media only screen and (max-width: 768px) {
 		background-attachment: fixed;
 		overflow: auto;
 		padding-bottom:30px;
+		.logo{margin-top:5%;}
+		.lugar h1{
+			font-size:40px;
+			margin-bottom:20px;
+		}
 	}
-	#home .logo{margin-top:5%;}
-	#home .lugar h1{
-		font-size:40px;
-		margin-bottom:20px;
-	} 
-}
 
-@media only screen and (max-width: 480px) {
-	#home{
+	@media only screen and (max-width: 480px) {
 		background-attachment: fixed;
 		overflow: auto;
+		.logo{margin-top:5%;}
+		.lugar h1{
+			font-size:40px;
+			margin-bottom:20px;
+		}
 	}
-	#home .logo{margin-top:5%;}
-	#home .lugar h1{
-		font-size:40px;
-		margin-bottom:20px;
-	} 
 }
+
