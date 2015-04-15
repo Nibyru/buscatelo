@@ -1,29 +1,31 @@
 <p id="notice"><%= notice %></p>
+<div class="panel panel-default">
+  <div class="panel-heading"><h1>Show Place</h1></div>
+  <ul class="list-group">
+    <li class="list-group-item">
+      <p>
+        <strong>Name:</strong>
+        <%= @place.name %>
+      </p>
+    </li>
+    <li class="list-group-item">
+      <p>
+        <strong>Address:</strong>
+        <%= @place.address %>
+      </p>
+    </li>
+    <li class="list-group-item">
+      <p>
+        <strong>Phone:</strong>
+        <%= @place.phone %>
+      </p>
+    </li>
+  </ul>
+  <div class="panel-footer">
+    <div class="btn-group">
+      <%= link_to 'Edit', edit_admin_place_path(@place), class: 'btn btn-default' %>
+      <%= link_to 'Back', admin_places_path, class: 'btn btn-default' %>
+    </div>
+  </div>
+</div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @place.name %>
-</p>
-
-<p>
-  <strong>Address:</strong>
-  <%= @place.address %>
-</p>
-
-<p>
-  <strong>Phone:</strong>
-  <%= @place.phone %>
-</p>
-
-<p>
-  <strong>Prices:</strong>
-  <%= @place.prices %>
-</p>
-
-<p>
-  <strong>Amenities:</strong>
-  <%= @place.amenities %>
-</p>
-
-<%= link_to 'Edit', edit_admin_place_path(@place) %> |
-<%= link_to 'Back', admin_places_path %>
