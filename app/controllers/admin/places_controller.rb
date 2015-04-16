@@ -26,7 +26,6 @@ class Admin::PlacesController < Admin::AdminController
   # POST /places.json
   def create
     @place = Place.new(place_params)
-
     respond_to do |format|
       if @place.save
         format.html { redirect_to admin_place_path(@place), notice: 'Place was successfully created.' }
@@ -42,6 +41,7 @@ class Admin::PlacesController < Admin::AdminController
   # PATCH/PUT /places/1.json
   def update
     respond_to do |format|
+      @place.amenities << Amenity.find(params[:place][:amenity_ids] ||= [])
       if @place.update(place_params)
         format.html { redirect_to admin_place_path(@place), notice: 'Place was successfully updated.' }
         format.json { render :show, status: :ok, location: @place }
@@ -70,6 +70,6 @@ class Admin::PlacesController < Admin::AdminController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def place_params
-      params.require(:place).permit(:name, :address, :phone, :prices, :amenities, prices_attributes: [:id, :name, :price, :_destroy], amenities_attributes: [:id, :name, :icon, :_destroy])
+      params.require(:place).permit(:name, :address, :phone, :prices, :amenities, :amenities_ids, prices_attributes: [:id, :name, :price, :_destroy])
     end
 end

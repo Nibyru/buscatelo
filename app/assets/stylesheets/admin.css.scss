@@ -5,8 +5,11 @@
     margin-top: 5px;
   }
   .form-control {
-  display: inline-block;
-  width: 27%;
-  margin: 0 5px;
+    display: inline-block;
+    width: 27%;
+    margin: 0 5px;
+  }
+  .form-control.select {
+    width: 50%;
   }
 }

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150414025639) do
+ActiveRecord::Schema.define(version: 20150416000116) do
 
   create_table "admins", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -40,6 +40,11 @@ ActiveRecord::Schema.define(version: 20150414025639) do
   end
 
   add_index "amenities", ["place_id"], name: "index_amenities_on_place_id"
+
+  create_table "amenities_places", force: true do |t|
+    t.string "amenity_id"
+    t.string "place_id"
+  end
 
   create_table "places", force: true do |t|
     t.string   "name"
