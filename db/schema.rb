@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150416000116) do
+ActiveRecord::Schema.define(version: 20150418230457) do
 
   create_table "admins", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -31,6 +31,13 @@ ActiveRecord::Schema.define(version: 20150416000116) do
   add_index "admins", ["email"], name: "index_admins_on_email", unique: true
   add_index "admins", ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
 
+  create_table "albums", force: true do |t|
+    t.integer  "place_id"
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "amenities", force: true do |t|
     t.string   "name"
     t.integer  "place_id"
@@ -46,13 +53,23 @@ ActiveRecord::Schema.define(version: 20150416000116) do
     t.string "place_id"
   end
 
-  create_table "places", force: true do |t|
-    t.string   "name"
-    t.text     "address"
-    t.string   "phone"
+  create_table "attachments", force: true do |t|
+    t.integer  "place_id"
+    t.string   "photo"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "photos", force: true do |t|
+    t.string   "name"
+    t.integer  "place_id"
+    t.string   "photo"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+# Could not dump table "places" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
 
   create_table "prices", force: true do |t|
     t.string   "name"
