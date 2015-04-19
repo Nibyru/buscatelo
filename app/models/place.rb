@@ -1,6 +1,6 @@
 class Place < ActiveRecord::Base
-  extend FriendlyId
-  friendly_id :slug_candidates, use: :slugged
+  #extend FriendlyId
+  #friendly_id :slug_candidates, use: :slugged
 
   has_many :prices
   has_many :photos

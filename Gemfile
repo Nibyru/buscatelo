@@ -12,7 +12,7 @@ gem 'devise'
 gem 'nested_form'
 gem 'carrierwave'
 gem 'fog'
-gem 'friendly_id', '~> 5.0.1'
+#gem 'friendly_id', '~> 5.0.1'
 
 group :development do
 	gem 'spring'
