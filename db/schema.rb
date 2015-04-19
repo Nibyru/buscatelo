@@ -39,8 +39,8 @@ ActiveRecord::Schema.define(version: 20150418234843) do
   end
 
   create_table "amenities_places", force: true do |t|
-    t.string "amenity_id"
-    t.string "place_id"
+    t.integer "amenity_id"
+    t.integer "place_id"
   end
 
   create_table "photos", force: true do |t|
