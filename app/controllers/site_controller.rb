@@ -10,7 +10,7 @@ class SiteController < ApplicationController
 
   def landing
     @amenities = Amenity.all
-    @place = Place.find(params[:id])
+    @place = Place.friendly.find(params[:id])
   end
 
 end
