@@ -15,6 +15,6 @@ Rails.application.routes.draw do
     get 'dashboard' => 'admin#dashboard'
   end
   get 'comodidades' => 'site#comodidades'
-  get 'landing' => 'site#landing'
+  get 'landing/:id' => 'site#landing', as: :landing
 
 end
