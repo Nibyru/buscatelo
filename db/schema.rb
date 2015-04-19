@@ -31,33 +31,16 @@ ActiveRecord::Schema.define(version: 20150418234843) do
   add_index "admins", ["email"], name: "index_admins_on_email", unique: true
   add_index "admins", ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
 
-  create_table "albums", force: true do |t|
-    t.integer  "place_id"
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "amenities", force: true do |t|
     t.string   "name"
-    t.integer  "place_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "icon"
   end
 
-  add_index "amenities", ["place_id"], name: "index_amenities_on_place_id"
-
   create_table "amenities_places", force: true do |t|
     t.string "amenity_id"
     t.string "place_id"
-  end
-
-  create_table "attachments", force: true do |t|
-    t.integer  "place_id"
-    t.string   "photo"
-    t.datetime "created_at"
-    t.datetime "updated_at"
   end
 
   create_table "photos", force: true do |t|
@@ -68,8 +51,14 @@ ActiveRecord::Schema.define(version: 20150418234843) do
     t.datetime "updated_at"
   end
 
-# Could not dump table "places" because of following NoMethodError
-#   undefined method `[]' for nil:NilClass
+  create_table "places", force: true do |t|
+    t.string   "name"
+    t.text     "address"
+    t.string   "phone"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "slug"
+  end
 
   create_table "prices", force: true do |t|
     t.string   "name"
