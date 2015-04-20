@@ -4,31 +4,32 @@
 			<div class="col-lg-3 col-md-3 filtros">
 				<%= render 'shared/filtros' %>
 			</div>
-			<div class="col-lg-9 col-lg-offset-3 col-md-9 col-md-offset-3 muestra">
-				<div class="cerrar">
-					<%= image_tag('cerrar.png') %>
-				</div>
-				<div class="row">
-					<div class="col-lg-12 col-md-12 lista">
-						<%= link_to (landing_path) do %>
-							<div class="col-lg-4 col-md-4 telo">
-								<div class="descripcion">
-									<h2>Le Privé</h2>
-									<p>Av. Mate de Luna 2000</p>
-									<p>Tafí Viejo, Tucumán</p>
-									<h3>$ 250<b> / hs.</b></h3>
-								</div>
-								<div class="descripcion-foto">
-									<div class="referencias">
-										<span class="icon-comentarios"></span>
-										<p>4,9 / 5 · Excelente</p>
+			<% @places.each do |place| %>
+				<div class="col-lg-9 col-lg-offset-3 col-md-9 col-md-offset-3 place">
+					<div class="cerrar">
+						<%= image_tag('cerrar.png') %>
+					</div>
+					<div class="row">
+						<div class="col-lg-12 col-md-12 lista">
+							<%= link_to (landing_path(place)) do %>
+								<div class="col-lg-4 col-md-4 telo">
+									<div class="descripcion">
+										<h2><%= place.name %></h2>
+										<p><%= place.address %></p>
+										<h3>$ 250<b> / hs.</b></h3>
+									</div>
+									<div class="descripcion-foto">
+										<div class="referencias">
+											<span class="icon-comentarios"></span>
+											<p>4,9 / 5 · Excelente</p>
+										</div>
 									</div>
 								</div>
-							</div>
-						<% end %>
+							<% end %>
+						</div>
 					</div>
 				</div>
-			</div>
+			<% end %>
 		</div>
 	</div>
 </div>

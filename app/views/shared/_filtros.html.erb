@@ -17,69 +17,15 @@
 
 <div class="servicios">
 	<p>Servicios</p>
-	<div class="btn-filtro">
-		<input type="checkbox">
-		<label>
-			<span class="icon-parking" style="font-size:18px; padding: 3px 5px;"></span>
-			<p>Parking</p>
-		</label>
-	</div>
-	<div class="btn-filtro">
-		<input type="checkbox">
-		<label>
-			<span class="icon-nieve"></span>
-			<p>Aire</p>
-		</label>
-	</div>
-	<div class="btn-filtro">
-		<input type="checkbox">
-		<label>
-			<span class="icon-agua"></span>
-			<p>Duchas</p>
-		</label>
-	</div>
-	<div class="btn-filtro">
-		<input type="checkbox">
-		<label>
-			<span class="icon-tematicas" style="font-size:24px; padding: 0px 5px;"></span>
-			<p>Temáticas</p>
-		</label>
-	</div>
-	<div class="btn-filtro">
-		<input type="checkbox">
-		<label>
-			<span class="icon-king"></span>
-			<p>King size</p>
-		</label>
-	</div>
-	<div class="btn-filtro">
-		<input type="checkbox">
-		<label>
-			<span class="icon-tv"></span>
-			<p>TV color</p>
-		</label>
-	</div>
-	<div class="btn-filtro">
-		<input type="checkbox">
-		<label>
-			<span class="icon-hidromasaje" style="font-size:18px; padding: 3px 5px;"></span>
-			<p>Hidromasaje</p>
-		</label>
-	</div>
-	<div class="btn-filtro">
-		<input type="checkbox">
-		<label>
-			<span class="icon-wifi"></span>
-			<p>Wi-Fi</p>
-		</label>
-	</div>
-	<div class="btn-filtro">
-		<input type="checkbox">
-		<label>
-			<span class="icon-frigobar"></span>
-			<p>Frigo bar</p>
-		</label>
-	</div>
+	<% @amenities.each do |amenity| %>
+		<div class="btn-filtro">
+			<input type="checkbox">
+			<label>
+				<span class="<%= amenity.icon %>" style="font-size:18px; padding: 3px 5px;"></span>
+				<p><%= amenity.name %></p>
+			</label>
+		</div>
+	<% end %>
 </div>
 
 <div class="logo-filtros">
