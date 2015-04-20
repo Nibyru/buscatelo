@@ -45,6 +45,9 @@
       </p>
     </li>
   </ul>
+  <% @place.photos.each do |photo| %>
+    <%= image_tag(photo.photo_url) %>
+  <% end %>
   <div class="panel-footer">
     <div class="btn-group">
       <%= link_to 'Edit', edit_admin_place_path(@place), class: 'btn btn-default' %>

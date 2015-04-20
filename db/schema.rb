@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150416000116) do
+ActiveRecord::Schema.define(version: 20150418234843) do
 
   create_table "admins", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -33,17 +33,22 @@ ActiveRecord::Schema.define(version: 20150416000116) do
 
   create_table "amenities", force: true do |t|
     t.string   "name"
-    t.integer  "place_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "icon"
   end
 
-  add_index "amenities", ["place_id"], name: "index_amenities_on_place_id"
-
   create_table "amenities_places", force: true do |t|
-    t.string "amenity_id"
-    t.string "place_id"
+    t.integer "amenity_id"
+    t.integer "place_id"
+  end
+
+  create_table "photos", force: true do |t|
+    t.string   "name"
+    t.integer  "place_id"
+    t.string   "photo"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "places", force: true do |t|
@@ -52,6 +57,7 @@ ActiveRecord::Schema.define(version: 20150416000116) do
     t.string   "phone"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "slug"
   end
 
   create_table "prices", force: true do |t|

@@ -64,11 +64,11 @@ class Admin::PlacesController < Admin::AdminController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_place
-      @place = Place.find(params[:id])
+      @place = Place.friendly.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def place_params
-      params.require(:place).permit(:name, :address, :phone, :amenity_ids => [], prices_attributes: [:id, :name, :price, :_destroy])
+      params.require(:place).permit(:name, :address, :phone, :amenity_ids => [], prices_attributes: [:id, :name, :price, :_destroy], photos_attributes: [:id, :name, :photo, :_destroy])
     end
 end
