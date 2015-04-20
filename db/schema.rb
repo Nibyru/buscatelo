@@ -33,14 +33,17 @@ ActiveRecord::Schema.define(version: 20150418234843) do
 
   create_table "amenities", force: true do |t|
     t.string   "name"
+    t.integer  "place_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "icon"
   end
 
+  add_index "amenities", ["place_id"], name: "index_amenities_on_place_id"
+
   create_table "amenities_places", force: true do |t|
-    t.integer "amenity_id"
-    t.integer "place_id"
+    t.string "amenity_id"
+    t.string "place_id"
   end
 
   create_table "photos", force: true do |t|
