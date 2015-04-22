@@ -1,3 +1,4 @@
+<!--
 <select class="form-control">
   <option>Localidad</option>
   <option>2</option>
@@ -14,18 +15,21 @@
 	<span class="icon-dinero"></span>
 	<span class="icon-dinero"></span>
 </div>
+-->
 
 <ul class="servicios">
 	<p>Servicios</p>
-	<% @amenities.each do |amenity| %>
-		<li class="btn-filtro">
-			<input type="checkbox">
-			<label>
-				<span class="<%= amenity.icon %>" style="font-size:18px; padding: 3px 5px;"></span>
-				<p><%= amenity.name %></p>
-			</label>
-		</li>
-	<% end %>
+  <form action="/comodidades">
+    <% @amenities.each do |amenity| %>
+      <li class="btn-filtro">
+        <input type="checkbox" name="filtro[]" value="<%= amenity.name.downcase %>" <%= checked_filter(amenity.name.downcase)%>>
+        <label>
+          <span class="<%= amenity.icon %>" style="font-size:18px; padding: 3px 5px;"></span>
+          <p><%= amenity.name %></p>
+        </label>
+      </li>
+    <% end %>
+  </form>
 </ul>
 
 <div class="logo-filtros">
