@@ -5,7 +5,11 @@ class SiteController < ApplicationController
 
   def comodidades
     @amenities = Amenity.all
-    @places = Place.all
+    if params[:filtro]
+      @places = Place.joins(:amenities).where("amenities.name = ?", params[:filtro].join(','))
+    else
+      @places = Place.all
+    end
   end
 
   def landing
