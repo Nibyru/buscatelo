@@ -2,11 +2,11 @@
 	<div class="container">
 		<div class="row">
 
-			<div class="col-lg-3 col-md-3 filtros">
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-4 filtros">
 				<%= render 'shared/filtros' %>
 			</div>
 
-			<div class="col-lg-9 col-lg-offset-3 col-md-9 col-md-offset-3 landing-page">
+			<div class="col-lg-9 col-lg-offset-3 col-md-9 col-md-offset-3 col-sm-9 col-sm-offset-3 col-xs-8 col-xs-offset-4 landing-page">
 
 				<div class="volver">
 					<%= link_to (comodidades_path) do %>
@@ -36,14 +36,14 @@
 						<h4><%= @place.address %></h4>
 						<h4><%= @place.phone %></h4>
 
-						<div class="precios">
+						<ul class="precios">
 							<p>PRECIOS</p>
 							<% @place.prices.each do |price| %>
-								<span>
+								<li>
 									<p><%= price.name %></p><h3>$<%= price.price %></h3>
-								</span>
+								</li>
 							<% end %>
-						</div>
+						</ul>
 
 						<p class="turno">*Los turnos constan de 1.30 hs cada uno??????????? esto es un campo mas?</p>
 
